@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Importando do Google Fonts a font Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Importando nosso arquivo de CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HTML semântico melhora a acessibilidade para humanos do seu site, pois leitores de tela conseguem ler o conteúdo de forma mais eficaz -->
+
+    <!-- Div que contém a imagem de fundo -->
+    <!-- Note que o nome da classe está sem ponto -->
+    <div class="bg-image">
+      <!-- Cabeçalho, onde fica o logo e o menu de navegação -->
+      <header class="nav-menu">
+        <!-- Logo -->
+        <!-- O 'src' é o caminho até o arquivo de image que deve ser carregado. './' significa 'na pasta atual', diferente de '../' que significa 'uma pasta acima' -->
+        <img class="animated-logo" src="./assets/images/logo.png" alt="Logo" />
+
+        <!-- Menu de navegação -->
+        <nav>
+          <ul>
+            <li>
+              <a href="/work">WORK</a>
+            </li>
+            <li>
+              <a href="/about">ABOUT</a>
+            </li>
+            <li>
+              <a href="/writing">WRITING</a>
+            </li>
+            <li>
+              <a href="/contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- O corpo, onde ficam os textos e os botões -->
+      <main class="main-content">
+        <!-- O h1 determina o título de maior importância na página -->
+        <h1>So much more than pixels.</h1>
+
+        <p>
+          Hello, my name is Pedro and I'm passionate about making things that
+          make an impact.
+        </p>
+
+        <a class="btn" href="/work">SEE MY WORK</a>
+
+        <a class="btn" href="/contact">HIRE ME</a>
+      </main>
+      <!-- Fechamento da div que contém a imagem de fundo -->
+    </div>
+    <!-- Rodapé, com a mensagem de copyright -->
+    <footer>Copyright Pedro 2021 &copy;</footer>
+  </body>
+</html>

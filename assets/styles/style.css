@@ -1,0 +1,96 @@
+/* Seletores determinam onde (em qual tag) uma ou mais regras específicas será aplicada */
+
+/* Seletor de nome tag: seleciona todas as tags com este nome, no caso, uma única tag body e aplica as regras contidas entre o par de chaves em todas as tags com este nome */
+body {
+  font-family: "Open Sans", sans-serif; /* No CSS, o ponto e vírgula é obrigatório para separar uma regra da outra */
+  color: white;
+  margin: 0;
+  /* vh: viewport-height, e é o altura em pixels do tamanho físico da tela do dispositivo. Essa funciona como uma porcentagem */
+  /* 100vh = 100% da altura física da tela do dispositivo */
+  height: 100vh;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* Tirar o underline do link */
+}
+
+/* Seletor de classe: seleciona todas as tags cujo atributo class possui este nome de classe e aplica as regras nessas tags. Todo nome de classe deve começar com '.' no CSS, mas não deve conter o '.' dentro do atributo class do HTML */
+
+.bg-image {
+  padding: 0 140px;
+  background-image: url("../images/bg.jpeg");
+  background-size: cover; /* A imagem de fundo será redimensionada para caber no elemento que ela ocupa */
+  background-position: center; /* Alinha o centro da imagem com o centro da tela */
+  background-repeat: no-repeat; /* Impede que a imagem repita caso ela não ocupe todo o espaço disponível */
+  /* A altura dessa div vai ser 100% da altura do elemento pai, que é o body. Toda porcentagem é referente às dimensões do elemento pai */
+  height: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Seletores descendentes: selecionam todas as tags li que são filhas de uma ul que são filhas de uma tag contendo a classe nav-menu */
+.nav-menu nav,
+.nav-menu ul,
+.nav-menu ul li {
+  display: inline;
+}
+
+.nav-menu ul li {
+  padding: 0 5px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.animated-logo {
+  transform: rotateY(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.animated-logo:hover {
+  transform: rotateY(-180deg);
+}
+
+.main-content {
+  margin-top: 120px;
+}
+
+.main-content h1 {
+  font-size: 64px;
+}
+
+.main-content p {
+  font-size: 32px;
+  padding-bottom: 30px;
+}
+
+.btn {
+  border: 2px solid white;
+  padding: 10px;
+  transition: all 0.5s ease-in-out; /* Trancisionar os estados que mudar no pseudo seletor :hover durante meio segundo usando a timing function ease-in-out que acelera o começo, desacelera no meio, e acelera novamente no final */
+}
+
+/* Capturar a ação do usuário passar o mouse em cima do elemento */
+.btn:hover {
+  border: 2px solid transparent;
+  background-color: white;
+  color: black;
+}
+
+/* Pseudo-seletor: um seletor "virtual" que só é aplicado em condições específicas */
+
+/* Aplica as regras abaixo apenas se o elemento com a classe btn for o primeiro com essa classe a aparecer */
+.btn:first-of-type {
+  margin-right: 20px;
+}
+
+footer {
+  background-color: black;
+  padding: 30px;
+  text-align: center;
+}

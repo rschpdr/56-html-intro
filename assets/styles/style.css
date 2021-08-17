@@ -34,6 +34,10 @@ a {
   padding: 20px 0;
 }
 
+.hamburger-button {
+  display: none;
+}
+
 /* Seletores descendentes: selecionam todas as tags li que são filhas de uma ul que são filhas de uma tag contendo a classe nav-menu */
 .nav-menu nav,
 .nav-menu ul,
@@ -61,11 +65,11 @@ a {
 }
 
 .main-content h1 {
-  font-size: 64px;
+  font-size: 4rem;
 }
 
 .main-content p {
-  font-size: 32px;
+  font-size: 2rem;
   padding-bottom: 30px;
 }
 
@@ -93,4 +97,56 @@ footer {
   background-color: black;
   padding: 30px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 13px;
+  }
+
+  .bg-image {
+    padding: 0 20px;
+  }
+
+  .nav-menu nav {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-menu nav.show {
+    height: 150px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-menu nav,
+  .nav-menu ul,
+  .nav-menu ul li {
+    display: block;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .nav-menu ul li {
+    line-height: 2.5;
+  }
+
+  .nav-menu {
+    display: block;
+    background-color: black;
+  }
+
+  .nav-menu-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger-button {
+    display: inline;
+  }
 }

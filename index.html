@@ -13,6 +13,14 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Importando nosso arquivo de CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
 
@@ -28,10 +36,21 @@
       <header class="nav-menu">
         <!-- Logo -->
         <!-- O 'src' é o caminho até o arquivo de image que deve ser carregado. './' significa 'na pasta atual', diferente de '../' que significa 'uma pasta acima' -->
-        <img class="animated-logo" src="./assets/images/logo.png" alt="Logo" />
+        <div class="nav-menu-top">
+          <img
+            class="animated-logo"
+            src="./assets/images/logo.png"
+            alt="Logo"
+          />
+
+          <i
+            id="hamburgerButton"
+            class="fas fa-bars fa-2x hamburger-button"
+          ></i>
+        </div>
 
         <!-- Menu de navegação -->
-        <nav>
+        <nav id="navMenu">
           <ul>
             <li>
               <a href="/work">WORK</a>
@@ -67,5 +86,7 @@
     </div>
     <!-- Rodapé, com a mensagem de copyright -->
     <footer>Copyright Pedro 2021 &copy;</footer>
+
+    <script src="./assets/scripts/index.js"></script>
   </body>
 </html>

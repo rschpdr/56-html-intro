@@ -3,11 +3,12 @@
 /* Seletor de nome tag: seleciona todas as tags com este nome, no caso, uma única tag body e aplica as regras contidas entre o par de chaves em todas as tags com este nome */
 body {
   font-family: "Open Sans", sans-serif; /* No CSS, o ponto e vírgula é obrigatório para separar uma regra da outra */
-  color: white;
+  color: rgb(101, 101, 101);
   margin: 0;
   /* vh: viewport-height, e é o altura em pixels do tamanho físico da tela do dispositivo. Essa funciona como uma porcentagem */
   /* 100vh = 100% da altura física da tela do dispositivo */
   height: 100vh;
+  background-color: lightpink;
 }
 
 a {
